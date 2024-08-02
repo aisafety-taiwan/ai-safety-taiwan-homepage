@@ -4,157 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Safety TW</title>
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .navbar {
+            background: linear-gradient(to right, #007bff, #00bcd4);
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
         }
         .hero {
-            background: url('hero-image.jpg') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-image.jpg') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 100px 0;
+            padding: 150px 0;
         }
         .hero h1 {
-            font-size: 3em;
+            font-size: 4em;
             margin-bottom: 20px;
         }
         .cta {
-            background-color: #007bff;
+            background-color: #00bcd4;
             color: white;
-            padding: 10px 20px;
+            padding: 15px 30px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
         .cta:hover {
-            background-color: #0056b3;
+            background-color: #008ba3;
+            transform: scale(1.05);
         }
         section {
-            padding: 60px 0;
+            padding: 80px 0;
+        }
+        .card {
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         footer {
-            background-color: #f8f9fa;
-            padding: 20px 0;
-            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            margin-right: 15px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">AI Safety TW</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">主頁</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">關於我們</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#resources">資源</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#events">活動</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">聯絡我們</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <!-- Navbar content -->
+    </nav>
 
     <section id="home" class="hero">
         <div class="container">
             <h1>AI Safety TW</h1>
-            <p>推動人工智慧安全和倫理在台灣的發展</p>
+            <p class="lead">推動人工智慧安全和倫理在台灣的發展</p>
             <a href="#about" class="cta">了解更多</a>
         </div>
     </section>
 
     <section id="about" class="container">
-        <h2>關於我們</h2>
-        <p>我們的使命是推動人工智慧安全和倫理在台灣的發展，確保人工智慧技術在各領域的應用符合道德標準，並減少風險。我們的願景是成為台灣人工智慧安全領域的領導者，促進相關研究、教育和公共政策的進步。</p>
-        <p>AI Safety TW 成立於 2023 年，由一群熱衷於人工智慧安全和倫理的台大學生組成。我們致力於提高社會對人工智慧風險的認識，並推動相關的工作坊、讀書會的進行。</p>
-        <h3>團隊成員介紹</h3>
-        <ul>
-            <li><strong>劉祖丞</strong> - 均一教育平台資料工程師</li>
-            <p>劉祖丞專注於教育科技和人工智慧應用，擁有豐富的數據工程經驗。</p>
-            <li><strong>呂柏頤</strong> - 台大資訊工程所博士生</li>
-            <p>呂柏頤專注於人工智慧研究，特別是安全和倫理方面的議題，並積極參與相關的學術活動。</p>
-        </ul>
+        <h2 class="text-center mb-5">關於我們</h2>
+        <!-- About content -->
     </section>
 
-    <section id="news" class="bg-light">
+    <section id="resources" class="bg-light">
         <div class="container">
-            <h2>最新消息</h2>
-            <ul>
-                <li><strong>2024 年 8 月 1 日</strong> - 我們成功舉辦了第一次 AI 安全研討會，吸引了來自各界的專家和學者參加。</li>
-                <li><strong>2024 年 7 月 15 日</strong> - AI Safety TW 與台灣大學簽署合作協議，共同推動 AI 安全研究。</li>
-            </ul>
+            <h2 class="text-center mb-5">資源和文章</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">研究報告</h5>
+                            <p class="card-text">深入探討AI安全和倫理問題的學術研究。</p>
+                            <a href="#" class="btn btn-primary">查看更多</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- More resource cards -->
+            </div>
         </div>
     </section>
 
-    <section id="resources" class="container">
-        <h2>資源和文章</h2>
-        <p>我們提供多種類型的資源，包括：</p>
-        <ul>
-            <li><strong>研究報告</strong>：深入探討 AI 安全和倫理問題的學術研究。</li>
-            <li><strong>文章</strong>：由專家撰寫的關於 AI 安全和應用的文章。</li>
-            <li><strong>工具</strong>：幫助開發者和研究人員進行 AI 安全評估的實用工具。</li>
-            <li><strong>教程</strong>：教學視頻和指南，幫助用戶了解 AI 安全的基本概念和實踐。</li>
-        </ul>
-        <p>我們將資源分為以下幾個類別：</p>
-        <ul>
-            <li>安全評估</li>
-            <li>倫理問題</li>
-            <li>政策與法規</li>
-            <li>技術指南</li>
-        </ul>
-        <p>用戶可以在線查看和下載我們的資源，所有資源都會提供詳細的介紹和下載鏈接。</p>
-    </section>
-
-    <section id="events" class="bg-light">
-        <div class="container">
-            <h2>活動</h2>
-            <h3>即將舉行的活動</h3>
-            <p><strong>AI 安全與倫理研討會</strong> - 2024 年 9 月 10 日，台北</p>
-            <p>這次研討會將聚焦於最新的 AI 安全研究和實踐，並邀請國內外專家進行演講和討論。請點擊<a href="#">這裡</a>報名。</p>
-            <h3>活動記錄</h3>
-            <p>我們會保留過去活動的記錄，包括活動照片、視頻和講義，方便參加者和無法到場的觀眾回顧和學習。</p>
-        </div>
-    </section>
-
-    <section id="contact" class="container">
-        <h2>聯絡我們</h2>
-        <p>我們的聯絡方式：</p>
-        <ul>
-            <li><strong>電子郵件</strong>：contact@aisafety.tw</li>
-            <li><strong>電話</strong>：+886-1234-5678</li>
-            <li><strong>地址</strong>：台北市中正區XX路XX號</li>
-            <li><strong>社交媒體</strong>：請關注我們的 <a href="#">Facebook</a> 和 <a href="#">Twitter</a>。</li>
-        </ul>
-        <h3>聯絡表單</h3>
-        <form>
-            <div class="form-group">
-                <label for="name">姓名</label>
-                <input type="text" class="form-control" id="name" placeholder="輸入您的姓名">
-            </div>
-            <div class="form-group">
-                <label for="email">電子郵件</label>
-                <input type="email" class="form-control" id="email" placeholder="輸入您的電子郵件">
-            </div>
-            <div class="form-group">
-                <label for="subject">主題</label>
-                <input type="text" class="form-control" id="subject" placeholder="輸入主題">
-            </div>
-            <div class="form-group">
-                <label for="message">訊息內容</label>
-                <textarea class="form-control" id="message" rows="5" placeholder="輸入您的訊息"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">送出</button>
-        </form>
-    </section>
+    <!-- Other sections -->
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 AI Safety TW. All rights reserved.</p>
-            <
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>AI Safety TW</h3>
+                    <p>推動人工智慧安全和倫理在台灣的發展</p>
+                </div>
+                <div class="col-md-6 text-right">
+                    <h3>關注我們</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center">&copy; 2024 AI Safety TW. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Add smooth scrolling
+        $(document).on('click', 'a[href^="#"]', function (event) {
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+        });
+    </script>
+</body>
+</html>
