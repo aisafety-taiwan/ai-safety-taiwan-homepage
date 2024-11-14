@@ -25,4 +25,25 @@
 
 ## 本地開發
 
-1. 複製專案到本地： 
+1. 複製專案到本地：
+```bash
+git clone https://github.com/aisafety-taiwan/ai-safety-taiwan-homepage.git
+```
+
+2. 使用瀏覽器開啟 `index.html` 即可預覽網站
+
+## 線上版本
+
+網站已部署於：[https://aisafety-taiwan.github.io/ai-safety-taiwan-homepage/](https://aisafety-taiwan.github.io/ai-safety-taiwan-homepage/)
+
+## 貢獻指南
+
+歡迎提交 Pull Request 協助改善網站。請確保您的更改符合以下準則：
+
+- 保持雙語內容（中文/英文）
+- 遵循現有的程式碼風格
+- 確保響應式設計的相容性
+
+## 授權條款
+
+© 2024 AI Safety TW. All rights reserved.
