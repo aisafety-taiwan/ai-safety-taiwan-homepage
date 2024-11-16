@@ -1,0 +1,110 @@
+:root {
+    /* 顏色變量 */
+    --bg-primary: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --accent-primary: #007bff;
+    --accent-secondary: #00bcd4;
+    
+    /* 覆蓋層顏色 */
+    --overlay-light: rgba(255, 255, 255, 0.97);
+    --overlay-dark: rgba(0, 0, 0, 0.8);
+    
+    /* 陰影 */
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-dark: rgba(255, 255, 255, 0.1);
+    
+    /* 斷點 */
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    
+    /* 間距 */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 2.5rem;
+    
+    /* 字體大小 */
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 2rem;
+    
+    /* 導航欄和頁尾顏色 */
+    --bg-footer: #333333;
+    --bg-footer-dark: #1a1a1a;
+    
+    /* 導航欄特定變量 */
+    --navbar-height: 64px;
+    --navbar-brand-size: 1.25rem;
+    --navbar-item-spacing: 1.2rem;
+    --navbar-border-radius: 8px;
+    
+    /* 動畫時間 */
+    --transition-fast: 0.2s;
+    --transition-normal: 0.3s;
+    --transition-slow: 0.5s;
+    
+    /* 特效 */
+    --blur-effect: 10px;
+    --hover-lift: translateY(-2px);
+    
+    /* 導航欄顏色優化 */
+    --navbar-bg-light: rgba(255, 255, 255, 0.85);
+    --navbar-bg-dark: rgba(18, 20, 24, 0.85);
+    --navbar-text-light: #2c3e50;
+    --navbar-text-dark: #ecf0f1;
+    --navbar-hover-bg-light: rgba(44, 62, 80, 0.05);
+    --navbar-hover-bg-dark: rgba(236, 240, 241, 0.1);
+    --navbar-active-bg-light: rgba(44, 62, 80, 0.1);
+    --navbar-active-bg-dark: rgba(236, 240, 241, 0.15);
+    
+    /* 導航欄效果 */
+    --navbar-blur: 12px;
+    --navbar-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --navbar-shadow-light: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --navbar-shadow-dark: 0 1px 2px rgba(0, 0, 0, 0.2);
+    
+    /* 深色模式特定顏色 */
+    --navbar-item-hover-bg-dark: rgba(255, 255, 255, 0.1);
+    --navbar-item-active-bg-dark: rgba(255, 255, 255, 0.15);
+    
+    /* 毛玻璃效果相關變數 */
+    --glass-bg-light: rgba(255, 255, 255, 0.75);
+    --glass-bg-dark: rgba(23, 23, 23, 0.85);
+    --glass-blur: blur(15px);
+    --glass-border-light: rgba(255, 255, 255, 0.2);
+    --glass-border-dark: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --overlay-light: rgba(0, 0, 0, 0.8);
+    --overlay-dark: rgba(255, 255, 255, 0.1);
+    --bg-footer: #1a1a1a;
+    --accent-primary: rgba(0, 60, 120, 0.9);
+    --accent-secondary: rgba(0, 90, 120, 0.9);
+    
+    --navbar-item-hover-bg: rgba(255, 255, 255, 0.1);
+    --navbar-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.glass-effect {
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  background-color: var(--glass-bg-light);
+  border: 1px solid var(--glass-border-light);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .glass-effect {
+    background-color: var(--glass-bg-dark);
+    border-color: var(--glass-border-dark);
+  }
+} 

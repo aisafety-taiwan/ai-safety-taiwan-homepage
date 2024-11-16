@@ -1,0 +1,7 @@
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    /* 其他響應式樣式... */
+} 

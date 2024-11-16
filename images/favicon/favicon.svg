@@ -1,0 +1,20 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#007bff"/>
+            <stop offset="100%" style="stop-color:#00bcd4"/>
+        </linearGradient>
+    </defs>
+    <!-- 盾牌基底 -->
+    <path d="M256 16L32 128v160c0 180 224 280 224 280s224-100 224-280V128L256 16z" 
+          fill="url(#gradient)"/>
+    <!-- AI 神經網絡圖案 -->
+    <g fill="none" stroke="white" stroke-width="12" opacity="0.9">
+        <circle cx="180" cy="200" r="20"/>
+        <circle cx="332" cy="200" r="20"/>
+        <circle cx="256" cy="320" r="20"/>
+        <line x1="180" y1="200" x2="256" y2="320"/>
+        <line x1="332" y1="200" x2="256" y2="320"/>
+        <line x1="180" y1="200" x2="332" y2="200"/>
+    </g>
+</svg> 

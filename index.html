@@ -3,240 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Safety Taiwan</title>
+    <title>AI Safety Taiwan｜推動人工智慧安全和倫理在台灣的發展</title>
+    
+    <!-- Favicon - 調整順序和優先級 -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="./site.webmanifest">
+    
+    <!-- 外部資源 -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-        }
-        h1, h2, h3 {
-            font-family: 'Montserrat', sans-serif;
-        }
-        .navbar {
-            background: linear-gradient(to right, #007bff, #00bcd4);
-        }
-        .navbar-brand, .nav-link {
-            color: white !important;
-        }
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-image.jpg') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 150px 0;
-        }
-        .hero h1 {
-            font-size: 4em;
-            margin-bottom: 20px;
-        }
-        .cta {
-            background-color: #00bcd4;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-        .cta:hover {
-            background-color: #008ba3;
-            transform: scale(1.05);
-        }
-        section {
-            padding: 80px 0;
-        }
-        .card {
-            transition: all 0.3s ease;
-            margin-bottom: 20px;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 40px 0;
-        }
-        .social-icons a {
-            color: white;
-            font-size: 24px;
-            margin-right: 15px;
-        }
-        .en {
-            color: rgb(104, 104, 104);
-            font-style: italic;
-        }
-    </style>
+    
+    <!-- 自定義樣式 -->
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/theme-switch.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">AI Safety Taiwan</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#home" onclick="route(event)">AI Safety Taiwan</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">主頁 | Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">關於我們 | About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#news">最新消息 | News</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#resources">資源 | Resources</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#events">活動 | Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">聯絡我們 | Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" onclick="route(event)">關於我們｜About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#news" onclick="route(event)">最新消息｜News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resources" onclick="route(event)">資源｜Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#events" onclick="route(event)">活動｜Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" onclick="route(event)">聯絡我們｜Contact</a></li>
+                    <li class="nav-item">
+                        <label class="switch" for="switch">
+                            <input type="checkbox" id="switch" />
+                            <div class="sunmoon">
+                                <div class="darkside"></div>
+                            </div>
+                            <div class="border"></div>
+                            <div class="clouds">
+                                <img src="images/theme-switch/cloud_1.svg" alt="" class="cloud cloud-1" />
+                                <img src="images/theme-switch/cloud_2.svg" alt="" class="cloud cloud-2" />
+                                <img src="images/theme-switch/cloud_3.svg" alt="" class="cloud cloud-3" />
+                                <img src="images/theme-switch/cloud_4.svg" alt="" class="cloud cloud-4" />
+                                <img src="images/theme-switch/stars.svg" alt="" class="stars" />
+                            </div>
+                        </label>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="container" style="line-height: 1.8; margin: 2rem auto;">
-            <h1 style="margin-bottom: 5rem;">AI Safety Taiwan</h1>
-            <p class="lead" style="margin-bottom: 1rem;">透過發展學術領域的研究發展，致力於打造安全且符合人類價值的人工智慧未來</p>
-            <p class="lead" style="margin-bottom: 2rem;">Through academic research development, we aim to build a safe and human-aligned AI future in Taiwan.</p>
-        </div>
-    </section>
-
-    <section id="about" class="container">
-        <h2 class="text-center mb-5">關於我們 | About Us</h2>
-
-        <p>我們的使命是推動人工智慧安全和倫理在台灣的發展，確保人工智慧技術在各領域的應用符合道德標準，並減少風險。我們的願景是成為台灣人工智慧安全領域的領導者，促進相關研究、教育和公共政策的進步。作為一個新興且快速發展的領域，我們透過提供高品質的基礎建設，包括工作坊、競賽活動、社群聚會等，積極支持台灣的機器學習社群投入 AI Safety 研究。</p>
-        
-        <p class="en">Our mission is to promote AI safety and ethics development in Taiwan, ensuring that AI applications across various fields meet ethical standards while minimizing risks. Our vision is to become a leader in Taiwan's AI safety field, advancing related research, education, and public policy. As an emerging and rapidly evolving field, we actively support Taiwan's machine learning community in pursuing AI safety research by providing high-quality infrastructure, including workshops, competitions, and social events.</p>
-        
-        <p>AI Safety Taiwan 成立於 2023 年，由一群熱衷於人工智慧安全和倫理的台大學生組成。我們致力於提高社會對人工智慧風險的認識，並推動相關的工作坊、讀書會的進行。透過建立完善的研究資源與基礎建設，我們致力於降低入門門檻，建立跨領域交流平台，並推動這個領域的發展。我們相信，只有凝聚更多優秀人才投入這個領域，才能真正應對 AI 發展帶來的挑戰。</p>
-        
-        <p class="en">Founded in 2023, AI Safety Taiwan consists of NTU students passionate about AI safety and ethics. We are committed to raising awareness about AI risks in society and organizing workshops and reading groups. By providing comprehensive research resources and infrastructure, we strive to lower barriers to entry and establish platforms for interdisciplinary exchange. We believe that only by bringing together talented individuals from diverse backgrounds can we effectively address the challenges posed by AI development.</p>        
-        <h2 class="text-center mt-5">核心成員 | Core Members</h2>
-        <div class="row mt-3">
-            <div class="col-md-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">劉祖丞 | Chor-Seng Lau</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">均一平台 資料工程師<br>Data Engineer @ Junyi Academy</h6>
-                        <p class="card-text">劉祖丞專注於 AI Alignment 的前沿研究，積極參與有效利他主義（EA）社群活動，致力於促進台灣與國際學術社群的連結。他特別關注科技在教育領域的應用，並關心其中的倫理議題。</p>
-                        <p class="card-text en">Chor-Seng is focused on cutting-edge AI Alignment research and actively participates in the Effective Altruism (EA) community, working to bridge Taiwan with the global academic community. He is particularly interested in the application of technology in education, with a strong focus on ethical considerations.</p>
-                    </div>                    
-                </div>
+    <main id="content">
+        <!-- 預設顯示首頁內容 -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>AI Safety Taiwan</h1>
+                <p class="lead">透過發展學術領域的研究發展，致力於打造安全且符合人類價值的人工智慧未來</p>
+                <p class="lead en">Through academic research development, we aim to build a safe and human-aligned AI future in Taiwan.</p>
             </div>
-            <div class="col-md-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">呂栢頤 | Po-Yi Lu</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">臺大資訊網路與多媒體研究所博士生<br>Ph.D. Student at NTU GINM</h6>
-                        <p class="card-text">呂栢頤專注於機器學習與人類偏好研究，特別是可控的生成式模型與人工智慧對齊方面的議題，並積極參與相關的學術活動。</p>
-                        <p class="card-text en">Po-Yi focuses on machine learning and human preference research, particularly in controllable generative models and AI alignment, and actively participates in related academic activities.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="news" class="bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">最新消息 | Latest News</h2>
-            <div class="card-deck">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">2024 年 11 月 20 日 | November 20, 2024</h5>
-                        <p class="card-text">我們開始舉辦第二屆 AI Alignment 讀書會，使用 Blue Dot Impact 的 AI Alignment Course 作為教材。</p>
-                        <ul class="card-text">
-                            <li>時間：每週三晚上 7:00 - 9:00</li>
-                            <li>地點：均一平台教育基金會（捷運西門出口）</li>
-                            <li>開始日期：2024/11/20</li>
-                        </ul>
-                        <p class="card-text">歡迎有興趣的成員加入！</p>
-                        <p class="card-text en">We are launching our second AI Alignment reading group, using Blue Dot Impact's AI Alignment Course.</p>
-                        <ul class="card-text en">
-                            <li>Time: Every Wednesday 7:00 PM - 9:00 PM</li>
-                            <li>Location: Junyi Academy Foundation (MRT Ximen Exit)</li>
-                            <li>Start Date: 2024/11/20</li>
-                        </ul>
-                        <p class="card-text en">All interested members are welcome to join!</p>
-                        <div class="d-flex flex-column flex-md-row">
-                            <a href="https://ntu-aisafety.notion.site/Welcome-e7a9abf955e3412cbd62250ce64f35f5?pvs=4" class="btn btn-primary mb-2 mb-md-0 mr-md-2" target="_blank">完整內容 | Full Content</a>
-                            <a href="https://docs.google.com/forms/d/1nktsi7hU04UhWmW0vMucLOh0rS6EFemHOYG0x2L8jes/edit" class="btn btn-primary" target="_blank">點我報名 | Join Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="resources" class="container">
-        <h2 class="text-center mb-5">資源和文章 | Resources and Articles</h2>
-        <p>我們提供多種類型的資源，包括：</p>
-        <p class="en">We provide various types of resources, including:</p>
-        <div class="row justify-content-center">
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">文章 | Articles</h5>
-                        <p class="card-text">由專家撰寫的關於 AI Safety 和應用的文章。</p>
-                        <p class="card-text en">Expert-written articles on AI safety and applications.</p>
-                        <a href="https://www.lesswrong.com/" class="btn btn-primary mt-auto" target="_blank">Less Wrong 論壇<br>Less Wrong Forum</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">工具 | Tools</h5>
-                        <p class="card-text">幫助開發者和研究人員進行 AI Safety 評估的實用工具。</p>
-                        <p class="card-text en">Practical tools for developers and researchers to conduct AI safety assessments.</p>
-                        <a href="https://www.neelnanda.io/mechanistic-interpretability/quickstart" class="btn btn-primary mt-auto" target="_blank">機制可解釋性快速入門<br>Mechanistic Interpretability Quickstart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">教程 | Tutorials</h5>
-                        <p class="card-text">教學影片和指南，幫助用戶了解 AI Safety 的基本概念和實踐。</p>
-                        <p class="card-text en">Educational videos and guides to help users understand AI safety concepts and practices.</p>
-                        <a href="https://course.aisafetyfundamentals.com/alignment?_gl=1*1y3m2w2*_ga*ODIyOTkyMzk2LjE3MzE1NDQ0NDY.*_ga_LGQ75B1P00*MTczMTU0NDQ0Ni4xLjEuMTczMTU0NTg1NC4wLjAuMA.." class="btn btn-primary mt-auto" target="_blank">Blue Dot Impact 課程<br>Blue Dot Impact AI Alignment Course</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="events" class="bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">活動 | Events</h2>
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h3 class="card-title">即將舉行的活動 | Upcoming Events</h3>
-                    <h4 class="card-subtitle mb-2 text-muted">EAGxSingapore 2024</h4>
-                    <p class="card-text">2024 年 12 月 14-15 日，新加坡 | December 14-15, 2024, Singapore</p>
-                    <p>EAGxSingapore 是一場針對東南亞地區有效利他主義社群成員和相關組織的會議，預計將有 200-350 名與會者參加。活動將包括演講、工作坊、小組討論和社交活動，旨在平衡入門級和進階的有效利他主義內容。</p>
-                    <p class="en">EAGxSingapore is a conference aimed at Effective Altruism community members and aligned organizations in Southeast Asia, expecting 200-350 attendees. The event will feature talks, workshops, small group discussions, and networking opportunities, balancing accessible and advanced EA content.</p>
-                    <a href="https://www.effectivealtruism.org/ea-global/events/eagxsingapore-2024" class="btn btn-primary">報名參加 | Apply Now</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title">活動記錄 | Event Archives</h3>
-                    <p class="card-text">我們會保留過去活動的記錄，包括活動照片，影片和講義，方便參加者和無法到場的觀眾回顧和學習。</p>
-                    <p class="card-text en">We maintain records of past events, including photos, videos, and materials, for participants and those unable to attend to review and learn from.</p>
-                    <a href="https://www.notion.so/ntu-ai-safety/e2c06040220947bf8ec9092b001e35f7?v=7d3ae4fbb68249e99f2c492f9bb3c5b2&pvs=4" class="btn btn-secondary">瀏覽過往活動 | Browse Past Events</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h3>AI Safety Taiwan | AI Safety 台灣</h3>
+                    <h3>AI Safety Taiwan｜AI Safety 台灣</h3>
                     <p>推動人工智慧安全和倫理在台灣的發展</p>
                     <p class="en">Promoting AI Safety and Ethics Development in Taiwan</p>
                 </div>
                 <div class="col-md-6 text-right">
-                    <h3>關注我們 | Follow Us</h3>
+                    <h3>關注我們｜Follow Us</h3>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -245,21 +87,16 @@
                 </div>
             </div>
             <hr>
-            <p class="text-center">&copy; 2024 AI Safety Taiwan. All rights reserved.</p>
+            <p class="text-center">&copy; <span id="year"></span> AI Safety Taiwan. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        // 自動更新年份
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // 回到頂部功能
-        document.getElementById('backToTop').addEventListener('click', function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
+    <script src="./js/effects.js"></script>
+    <script src="./js/routing.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
