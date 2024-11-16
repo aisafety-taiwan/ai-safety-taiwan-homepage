@@ -544,7 +544,7 @@ footer {
     }
 } 
 
-/* 確保背景圖片在正確的層級 */
+/* 確保背景��片在正確的層級 */
 .page-content {
     position: relative;
     z-index: 0;  /* 確保背景在卡片下方 */
@@ -648,4 +648,33 @@ footer {
         text-overflow: ellipsis;
         white-space: nowrap;
     }
+} 
+
+/* 導航欄漢堡選單樣式優化 */
+.navbar-toggler {
+    padding: 0.25rem 0.5rem;
+    margin: 0;
+    border: 1px solid rgba(44, 62, 80, 0.3);  /* 加深邊框顏色 */
+}
+
+/* 淺色模式下的漢堡選單圖標 */
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(44, 62, 80, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    /* 使用深色的漢堡選單圖標 */
+}
+
+/* 深色模式下的漢堡選單圖標 */
+[data-theme="dark"] .navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(236, 240, 241, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    /* 保持原有的淺色圖標 */
+}
+
+/* 淺色模式下的漢堡選單邊框 */
+.navbar-dark .navbar-toggler {
+    border-color: rgba(44, 62, 80, 0.3);
+}
+
+/* 深色模式下的漢堡選單邊框 */
+[data-theme="dark"] .navbar-dark .navbar-toggler {
+    border-color: rgba(236, 240, 241, 0.3);
 } 
