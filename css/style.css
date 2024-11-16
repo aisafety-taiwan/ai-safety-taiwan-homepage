@@ -196,13 +196,14 @@
 
 /* 導航欄樣式優化 */
 .navbar {
-    height: var(--navbar-height);
+    height: auto;
+    min-height: var(--navbar-height);
     background: var(--navbar-bg-light);
     backdrop-filter: saturate(180%) blur(var(--navbar-blur));
     -webkit-backdrop-filter: saturate(180%) blur(var(--navbar-blur));
     box-shadow: var(--navbar-shadow-light);
     transition: all var(--navbar-transition);
-    padding: 0;
+    padding: 0.5rem 1rem;
     position: fixed;
     top: 0;
     right: 0;
@@ -212,9 +213,9 @@
 
 /* 導航欄容器 */
 .navbar .container {
-    height: 100%;
-    display: flex;
-    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: calc(var(--navbar-height) - 1rem);
 }
 
 /* 品牌標誌 */
@@ -546,7 +547,7 @@ footer {
 /* 確保背景圖片在正確的層級 */
 .page-content {
     position: relative;
-    z-index: 0;  /* 確���背景在卡片下方 */
+    z-index: 0;  /* 確保背景在卡片下方 */
 }
 
 /* 移除可能阻擋毛玻璃效果的覆蓋層 */
@@ -611,4 +612,40 @@ footer {
 /* 確保嵌套卡片（如 About 頁面的核心成員卡片）也正確顯示 */
 [data-theme="dark"] .card .card {
     background: rgba(18, 18, 24, 0.5);
+} 
+
+/* 調整導航欄在小螢幕時的樣式 */
+@media (max-width: 991px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-brand {
+        padding: 0.5rem 0;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--navbar-bg-light);
+        backdrop-filter: saturate(180%) blur(var(--navbar-blur));
+        -webkit-backdrop-filter: saturate(180%) blur(var(--navbar-blur));
+        padding: 0.5rem 1rem;
+        border-radius: 0 0 var(--navbar-border-radius) var(--navbar-border-radius);
+        box-shadow: var(--navbar-shadow-light);
+    }
+
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+        margin: 0;
+    }
+
+    .navbar-brand {
+        max-width: calc(100% - 60px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 } 

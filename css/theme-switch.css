@@ -27,6 +27,24 @@
     margin: 0.5rem;
 }
 
+@media (max-width: 991px) {
+    .navbar .switch {
+        width: calc(var(--switch-width) * 0.4);
+        height: calc(var(--switch-height) * 0.4);
+        margin: 0.5rem 0;
+    }
+
+    .navbar-nav {
+        align-items: center;
+    }
+
+    .navbar .nav-item:last-child {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
 .switch::before {
     content: '';
     position: absolute;
