@@ -544,7 +544,7 @@ footer {
     }
 } 
 
-/* 確保背景��片在正確的層級 */
+/* 確保背景片在正確的層級 */
 .page-content {
     position: relative;
     z-index: 0;  /* 確保背景在卡片下方 */
@@ -677,4 +677,100 @@ footer {
 /* 深色模式下的漢堡選單邊框 */
 [data-theme="dark"] .navbar-dark .navbar-toggler {
     border-color: rgba(236, 240, 241, 0.3);
+} 
+
+/* 我們的文章區塊樣式 */
+.section-title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.articles-grid {
+    margin-top: var(--spacing-xl);
+}
+
+.article-card {
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    border-radius: 12px;
+    box-shadow: 
+        0 8px 32px rgba(31, 38, 135, 0.15),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 15px 45px rgba(31, 38, 135, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+.article-title {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.article-meta {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+.article-tag {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.article-date {
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+}
+
+.article-excerpt {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.article-excerpt.en {
+    font-style: italic;
+    color: var(--text-muted);
+}
+
+/* 深色模式適配 */
+[data-theme="dark"] .article-card {
+    background: rgba(18, 18, 24, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .article-title {
+    color: var(--color-light);
+}
+
+[data-theme="dark"] .article-tag {
+    background-color: var(--color-primary-dark);
+    color: var(--color-light);
+}
+
+[data-theme="dark"] .article-excerpt {
+    color: var(--color-light-muted);
+}
+
+[data-theme="dark"] .article-excerpt.en {
+    color: var(--color-light-muted);
 } 
