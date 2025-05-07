@@ -448,6 +448,8 @@ footer {
 .page-content .container {
     padding-top: var(--spacing-md);
     padding-bottom: var(--spacing-xl);
+    position: relative;
+    z-index: 1;
 }
 
 /* 背景覆蓋層 */
@@ -696,24 +698,24 @@ footer {
     padding: var(--spacing-lg);
     margin-bottom: var(--spacing-xl);
     border-radius: 12px;
-    box-shadow: 
-        0 8px 32px rgba(31, 38, 135, 0.15),
-        0 0 0 1px rgba(255, 255, 255, 0.2);
+    /* Explicitly set light mode background and text color */
+    background-color: var(--glass-bg-light);
+    color: var(--text-primary);
+    /* Adjusted box-shadow to match other cards' style (blackish shadow) */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
 }
 
 .article-card:hover {
     transform: translateY(-5px);
-    box-shadow: 
-        0 15px 45px rgba(31, 38, 135, 0.2),
-        0 0 0 1px rgba(255, 255, 255, 0.25);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 .article-title {
     font-size: var(--font-size-lg);
     font-weight: 700;
     margin-bottom: var(--spacing-sm);
-    color: var(--text-primary);
+    color: var(--text-primary); /* Ensure dark text in light mode */
 }
 
 .article-meta {
@@ -725,8 +727,9 @@ footer {
 }
 
 .article-tag {
-    background-color: var(--color-primary-light);
-    color: var(--color-primary);
+    /* Adjusted for better light mode appearance */
+    background-color: rgba(0, 123, 255, 0.1); /* Light blue background */
+    color: var(--accent-primary); /* Theme blue text */
     padding: 4px 10px;
     border-radius: 20px;
     font-weight: 500;
@@ -740,7 +743,7 @@ footer {
 
 .article-excerpt {
     margin-bottom: var(--spacing-sm);
-    color: var(--text-secondary);
+    color: var(--text-secondary); /* Ensure grey text in light mode */
     line-height: 1.6;
 }
 
@@ -759,16 +762,16 @@ footer {
 }
 
 [data-theme="dark"] .article-title {
-    color: var(--text-primary); /* 標準淺色文字 */
+    color: var(--text-primary); /* This correctly becomes light text in dark mode */
 }
 
 [data-theme="dark"] .article-tag {
-    background-color: var(--accent-primary); /* 深色模式強調色背景 */
-    color: var(--text-primary); /* 標準淺色文字 */
+    background-color: var(--accent-primary);
+    color: var(--text-primary); /* This correctly becomes light text for the tag in dark mode */
 }
 
 [data-theme="dark"] .article-excerpt {
-    color: var(--text-secondary); /* 標準次要淺色文字 */
+    color: var(--text-secondary); /* This correctly becomes light grey text in dark mode */
 }
 
 [data-theme="dark"] .article-excerpt.en {
