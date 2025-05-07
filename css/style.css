@@ -751,26 +751,26 @@ footer {
 
 /* 深色模式適配 */
 [data-theme="dark"] .article-card {
-    background: rgba(18, 18, 24, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: var(--navbar-bg-dark); /* 與其他卡片一致的背景 */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* 與其他卡片一致的邊框 */
     box-shadow: 
         0 8px 32px rgba(0, 0, 0, 0.3),
         0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
 [data-theme="dark"] .article-title {
-    color: var(--color-light);
+    color: var(--text-primary); /* 標準淺色文字 */
 }
 
 [data-theme="dark"] .article-tag {
-    background-color: var(--color-primary-dark);
-    color: var(--color-light);
+    background-color: var(--accent-primary); /* 深色模式強調色背景 */
+    color: var(--text-primary); /* 標準淺色文字 */
 }
 
 [data-theme="dark"] .article-excerpt {
-    color: var(--color-light-muted);
+    color: var(--text-secondary); /* 標準次要淺色文字 */
 }
 
 [data-theme="dark"] .article-excerpt.en {
-    color: var(--color-light-muted);
+    color: var(--text-secondary); /* 標準次要淺色文字 */
 } 
