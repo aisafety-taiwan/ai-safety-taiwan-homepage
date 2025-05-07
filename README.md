@@ -30,7 +30,10 @@
 git clone https://github.com/aisafety-taiwan/ai-safety-taiwan-homepage.git
 ```
 
-2. 使用瀏覽器開啟 `index.html` 即可預覽網站
+2. 使用以下指令在 local 運行
+```bash
+jekyll serve
+```
 
 ## 線上版本
 
